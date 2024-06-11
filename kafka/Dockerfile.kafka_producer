@@ -1,0 +1,5 @@
+FROM python:3.8-slim
+WORKDIR /app
+COPY kafka_producer.py /app/
+RUN pip install kafka-python requests
+CMD ["python", "kafka_producer.py"]
